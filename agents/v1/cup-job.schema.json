@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TacticMesh local fixed knockout cup job",
+  "allOf": [
+    {
+      "anyOf": [
+        {
+          "properties": {
+            "entrants": {
+              "minItems": 4,
+              "maxItems": 4
+            }
+          }
+        },
+        {
+          "properties": {
+            "entrants": {
+              "minItems": 8,
+              "maxItems": 8
+            }
+          }
+        },
+        {
+          "properties": {
+            "entrants": {
+              "minItems": 16,
+              "maxItems": 16
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "format": {
+      "const": "tacticmesh-cup-job"
+    },
+    "formatVersion": {
+      "const": "1.0.0"
+    },
+    "pack": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024
+    },
+    "entrants": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 16,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,79}$"
+      }
+    },
+    "seed": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4294967295
+    },
+    "cupId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,79}$"
+    },
+    "draw": {
+      "enum": [
+        "seeded",
+        "manual"
+      ]
+    },
+    "halfSeconds": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    }
+  },
+  "required": [
+    "format",
+    "formatVersion",
+    "pack",
+    "entrants",
+    "seed"
+  ]
+}

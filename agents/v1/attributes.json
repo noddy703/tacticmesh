@@ -1,0 +1,886 @@
+{
+  "version": "tm-attributes-1",
+  "scale": {
+    "minimum": 1,
+    "maximum": 100,
+    "mapping": "Identity to current engine attribute values; existing physics clamps physical skill reads at 99. No hidden overall multiplier."
+  },
+  "defaultsProfileVersion": "tm-role-1",
+  "defaults": {
+    "GK": {
+      "handling": 72,
+      "reflexes": 74,
+      "catching": 70,
+      "diving": 73,
+      "kicking": 63,
+      "positioning": 74,
+      "awareness": 73,
+      "anticipation": 72,
+      "composure": 70,
+      "strength": 65,
+      "reach": 72,
+      "stamina": 70
+    },
+    "DEF": {
+      "strength": 72,
+      "heading": 69,
+      "tackling": 72,
+      "interception": 72,
+      "positioning": 73,
+      "discipline": 72,
+      "anticipation": 70,
+      "awareness": 68,
+      "shortPassing": 62,
+      "longPassing": 58,
+      "stamina": 72
+    },
+    "MID": {
+      "shortPassing": 72,
+      "firstTouch": 70,
+      "vision": 70,
+      "teamwork": 71,
+      "positioning": 70,
+      "awareness": 71,
+      "stamina": 76,
+      "workRate": 75,
+      "anticipation": 68,
+      "tackling": 60
+    },
+    "FWD": {
+      "acceleration": 75,
+      "sprintSpeed": 75,
+      "dribbling": 72,
+      "offBallIntelligence": 72,
+      "finishing": 72,
+      "shooting": 70,
+      "composure": 68,
+      "anticipation": 70,
+      "stamina": 72
+    }
+  },
+  "baselineMissingAttribute": 57,
+  "outfieldGoalkeeperDefault": 18,
+  "calibration": "Professional outcome calibration remains open. Values are simulator inputs, not official ratings.",
+  "attributes": [
+    {
+      "name": "acceleration",
+      "group": "physical",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/intelligence.js",
+          "lines": [
+            314
+          ]
+        },
+        {
+          "file": "src/physics.js",
+          "lines": [
+            287,
+            308
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "sprintSpeed",
+      "group": "physical",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/intelligence.js",
+          "lines": [
+            313
+          ]
+        },
+        {
+          "file": "src/physics.js",
+          "lines": [
+            281
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "agility",
+      "group": "physical",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/physics.js",
+          "lines": [
+            310,
+            311,
+            317,
+            318
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "turning",
+      "group": "physical",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/physics.js",
+          "lines": [
+            302
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "balance",
+      "group": "physical",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/intelligence.js",
+          "lines": [
+            1267
+          ]
+        },
+        {
+          "file": "src/physics.js",
+          "lines": [
+            420,
+            458,
+            489,
+            612,
+            704
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "strength",
+      "group": "physical",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/physics.js",
+          "lines": [
+            338,
+            419,
+            421,
+            490
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "stamina",
+      "group": "physical",
+      "status": "reserved",
+      "consumers": [],
+      "note": "Retained in engine roster; no direct consumer currently verified. Do not claim a gameplay effect."
+    },
+    {
+      "name": "jumping",
+      "group": "physical",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/physics.js",
+          "lines": [
+            451,
+            456,
+            457
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "reach",
+      "group": "physical",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/physics.js",
+          "lines": [
+            413,
+            451,
+            555
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "recoverySpeed",
+      "group": "physical",
+      "status": "reserved",
+      "consumers": [],
+      "note": "Retained in engine roster; no direct consumer currently verified. Do not claim a gameplay effect."
+    },
+    {
+      "name": "firstTouch",
+      "group": "technical",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/intelligence.js",
+          "lines": [
+            908,
+            1120
+          ]
+        },
+        {
+          "file": "src/physics.js",
+          "lines": [
+            612,
+            704,
+            716
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "shortPassing",
+      "group": "technical",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/intelligence.js",
+          "lines": [
+            775,
+            777
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "longPassing",
+      "group": "technical",
+      "status": "reserved",
+      "consumers": [],
+      "note": "Retained in engine roster; no direct consumer currently verified. Do not claim a gameplay effect."
+    },
+    {
+      "name": "throughBalls",
+      "group": "technical",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/intelligence.js",
+          "lines": [
+            804
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "crossing",
+      "group": "technical",
+      "status": "reserved",
+      "consumers": [],
+      "note": "Retained in engine roster; no direct consumer currently verified. Do not claim a gameplay effect."
+    },
+    {
+      "name": "shooting",
+      "group": "technical",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/intelligence.js",
+          "lines": [
+            480,
+            669,
+            671,
+            681,
+            1544
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "finishing",
+      "group": "technical",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/intelligence.js",
+          "lines": [
+            669
+          ]
+        },
+        {
+          "file": "src/rules.js",
+          "lines": [
+            334
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "heading",
+      "group": "technical",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/physics.js",
+          "lines": [
+            458
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "dribbling",
+      "group": "technical",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/intelligence.js",
+          "lines": [
+            889
+          ]
+        },
+        {
+          "file": "src/physics.js",
+          "lines": [
+            420,
+            489
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "ballCarrying",
+      "group": "technical",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/intelligence.js",
+          "lines": [
+            889
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "tackling",
+      "group": "technical",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/intelligence.js",
+          "lines": [
+            1267
+          ]
+        },
+        {
+          "file": "src/physics.js",
+          "lines": [
+            419,
+            490
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "interception",
+      "group": "technical",
+      "status": "reserved",
+      "consumers": [],
+      "note": "Retained in engine roster; no direct consumer currently verified. Do not claim a gameplay effect."
+    },
+    {
+      "name": "weakFoot",
+      "group": "technical",
+      "status": "reserved",
+      "consumers": [],
+      "note": "Retained in engine roster; no direct consumer currently verified. Do not claim a gameplay effect."
+    },
+    {
+      "name": "awareness",
+      "group": "mental",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/intelligence.js",
+          "lines": [
+            45,
+            113
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "vision",
+      "group": "mental",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/intelligence.js",
+          "lines": [
+            45,
+            653
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "anticipation",
+      "group": "mental",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/intelligence.js",
+          "lines": [
+            47,
+            653,
+            1687,
+            1694,
+            1699
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "decisionMaking",
+      "group": "mental",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/intelligence.js",
+          "lines": [
+            653
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "composure",
+      "group": "mental",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/intelligence.js",
+          "lines": [
+            653,
+            681,
+            908
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "positioning",
+      "group": "mental",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/intelligence.js",
+          "lines": [
+            653
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "teamwork",
+      "group": "mental",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/intelligence.js",
+          "lines": [
+            653
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "creativity",
+      "group": "mental",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/intelligence.js",
+          "lines": [
+            653
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "concentration",
+      "group": "mental",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/intelligence.js",
+          "lines": [
+            46,
+            113
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "discipline",
+      "group": "mental",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/intelligence.js",
+          "lines": [
+            929,
+            1193,
+            1228,
+            1267
+          ]
+        },
+        {
+          "file": "src/physics.js",
+          "lines": [
+            515
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "aggression",
+      "group": "mental",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/intelligence.js",
+          "lines": [
+            1248,
+            1268
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "workRate",
+      "group": "mental",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/physics.js",
+          "lines": [
+            327
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "offBallIntelligence",
+      "group": "mental",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/intelligence.js",
+          "lines": [
+            653
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "handling",
+      "group": "goalkeeper",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/intelligence.js",
+          "lines": [
+            992
+          ]
+        },
+        {
+          "file": "src/physics.js",
+          "lines": [
+            413,
+            418,
+            561
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "reflexes",
+      "group": "goalkeeper",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/intelligence.js",
+          "lines": [
+            992,
+            1093
+          ]
+        },
+        {
+          "file": "src/physics.js",
+          "lines": [
+            419,
+            561
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "catching",
+      "group": "goalkeeper",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/intelligence.js",
+          "lines": [
+            992
+          ]
+        },
+        {
+          "file": "src/physics.js",
+          "lines": [
+            418,
+            561
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "parrying",
+      "group": "goalkeeper",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/physics.js",
+          "lines": [
+            436,
+            576,
+            581
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "diving",
+      "group": "goalkeeper",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/intelligence.js",
+          "lines": [
+            1093
+          ]
+        },
+        {
+          "file": "src/physics.js",
+          "lines": [
+            272,
+            317,
+            318,
+            555
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "oneOnOne",
+      "group": "goalkeeper",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/intelligence.js",
+          "lines": [
+            1023
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "aerialCommand",
+      "group": "goalkeeper",
+      "status": "reserved",
+      "consumers": [],
+      "note": "Retained in engine roster; no direct consumer currently verified. Do not claim a gameplay effect."
+    },
+    {
+      "name": "sweeping",
+      "group": "goalkeeper",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/intelligence.js",
+          "lines": [
+            932
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    },
+    {
+      "name": "throwing",
+      "group": "goalkeeper",
+      "status": "reserved",
+      "consumers": [],
+      "note": "Retained in engine roster; no direct consumer currently verified. Do not claim a gameplay effect."
+    },
+    {
+      "name": "kicking",
+      "group": "goalkeeper",
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/intelligence.js",
+          "lines": [
+            777
+          ]
+        }
+      ],
+      "note": "Existing engine numeric read."
+    }
+  ],
+  "tendencies": [
+    {
+      "name": "riskAppetite",
+      "minimum": 0,
+      "maximum": 1,
+      "status": "consumed",
+      "consumers": [
+        {
+          "file": "src/intelligence.js",
+          "lines": [
+            1395
+          ]
+        }
+      ]
+    },
+    {
+      "name": "directness",
+      "minimum": 0,
+      "maximum": 1,
+      "status": "reserved",
+      "consumers": []
+    },
+    {
+      "name": "patience",
+      "minimum": 0,
+      "maximum": 1,
+      "status": "reserved",
+      "consumers": []
+    },
+    {
+      "name": "selfishness",
+      "minimum": 0,
+      "maximum": 1,
+      "status": "reserved",
+      "consumers": []
+    },
+    {
+      "name": "roaming",
+      "minimum": 0,
+      "maximum": 1,
+      "status": "reserved",
+      "consumers": []
+    },
+    {
+      "name": "pressingEnthusiasm",
+      "minimum": 0,
+      "maximum": 1,
+      "status": "reserved",
+      "consumers": []
+    },
+    {
+      "name": "receiveToFeet",
+      "minimum": 0,
+      "maximum": 1,
+      "status": "reserved",
+      "consumers": []
+    },
+    {
+      "name": "attackSpace",
+      "minimum": 0,
+      "maximum": 1,
+      "status": "reserved",
+      "consumers": []
+    },
+    {
+      "name": "earlyCrossing",
+      "minimum": 0,
+      "maximum": 1,
+      "status": "reserved",
+      "consumers": []
+    },
+    {
+      "name": "dribbleTendency",
+      "minimum": 0,
+      "maximum": 1,
+      "status": "reserved",
+      "consumers": []
+    },
+    {
+      "name": "longShotTendency",
+      "minimum": 0,
+      "maximum": 1,
+      "status": "reserved",
+      "consumers": []
+    },
+    {
+      "name": "conservativePassing",
+      "minimum": 0,
+      "maximum": 1,
+      "status": "reserved",
+      "consumers": []
+    },
+    {
+      "name": "switchPlay",
+      "minimum": 0,
+      "maximum": 1,
+      "status": "reserved",
+      "consumers": []
+    },
+    {
+      "name": "weakFootUse",
+      "minimum": 0,
+      "maximum": 1,
+      "status": "reserved",
+      "consumers": []
+    }
+  ],
+  "dimensions": {
+    "height": "metres; retained player data, no direct physical consumer verified",
+    "weight": "kilograms; retained player data, no direct physical consumer verified",
+    "preferredFoot": "retained player data; no direct execution consumer verified"
+  }
+}

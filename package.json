@@ -1,0 +1,26 @@
+{
+  "name": "tacticmesh",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TacticMesh \u2014 an open-source local-first football simulator",
+  "scripts": {
+    "build": "node tools/build.cjs",
+    "test": "node tools/run-tests.cjs",
+    "release-check": "node tools/release-check.cjs",
+    "benchmark": "node tools/benchmark.cjs",
+    "batch": "node tools/batch.cjs",
+    "scorecard": "node tools/scorecard.cjs",
+    "product-test": "node tests/product-contracts.cjs && node tests/product-schema.cjs && node tests/product-worker.cjs && node tests/product-images.cjs && node tests/product-build.cjs && node tests/product-checkpoints.cjs && node tests/product-competition.cjs && node tests/product-reports.cjs && node tests/product-cli.cjs",
+    "contracts": "node tools/generate-product-docs.cjs",
+    "validate-pack": "node tools/tacticmesh-cli.mjs validate",
+    "package": "node tools/build.cjs && node tools/pack-release.cjs"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Wert Qas",
+    "url": "https://www.youtube.com/@wertqas9269"
+  },
+  "dependencies": {
+    "sharp": "0.35.5"
+  }
+}

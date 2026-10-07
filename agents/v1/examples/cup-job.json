@@ -1,0 +1,12 @@
+{
+  "format": "tacticmesh-cup-job",
+  "formatVersion": "1.0.0",
+  "pack": "./four-team-pack.json",
+  "entrants": [
+    "redbridge",
+    "ashford",
+    "mossfield",
+    "seabrook"
+  ],
+  "seed": 71
+}

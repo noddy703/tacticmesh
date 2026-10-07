@@ -1,0 +1,8 @@
+{
+  "format": "tacticmesh-match-job",
+  "formatVersion": "1.0.0",
+  "pack": "./two-team-pack.json",
+  "home": "home",
+  "away": "away",
+  "seed": 20261014
+}

@@ -1,0 +1,45 @@
+{
+  "name": "TacticMesh",
+  "descriptor": "An open-source football simulator",
+  "version": "1.0.0",
+  "createdBy": "Wert Qas",
+  "creatorURL": "https://www.youtube.com/@wertqas9269",
+  "codeLicense": "MIT",
+  "remoteExecution": false,
+  "packFormat": "tacticmesh-pack",
+  "formatVersions": [
+    "1.0.0"
+  ],
+  "engineContract": "tf-v1",
+  "attributeModelVersion": "tm-attributes-1",
+  "defaultsProfileVersion": "tm-role-1",
+  "capabilities": {
+    "textPacks": true,
+    "localArchiveImport": true,
+    "browserImageNormalization": true,
+    "nodeImageDecoderIncluded": true,
+    "localExhibitionMatches": true,
+    "knockoutCups": true,
+    "localSimulationWorker": true,
+    "scorecardPNG": true,
+    "stagedBackups": true,
+    "localCLI": true
+  },
+  "schemas": {
+    "pack": "v1/pack.schema.json",
+    "matchJob": "v1/match-job.schema.json",
+    "cupJob": "v1/cup-job.schema.json",
+    "result": "v1/result.schema.json"
+  },
+  "guide": "v1/create-pack.md",
+  "attributes": "v1/attributes.json",
+  "formations": "v1/formations.json",
+  "calibration": "Professional goals and shot-volume calibration remains open. Simulator outputs are not validated real-fixture forecasts.",
+  "discovery": "Project-defined static paths; no universal agent protocol or hosted compute API.",
+  "localRunnerSetup": "Node >=20.9, npm ci; pinned Sharp 0.35.5 decodes local image packs. Browser runtime requires no install.",
+  "applicationBuild": "tf-136f19c256623e45",
+  "engineBuild": "engine-4994949ed88c0595",
+  "coreBuild": "core-d9aca92dd03969f8",
+  "sourceEngineBuild": "engine-4994949ed88c0595",
+  "legacySourceEngineBuild": "tf-0ccdc2176bc4119f"
+}

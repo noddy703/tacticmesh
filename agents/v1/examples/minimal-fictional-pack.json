@@ -1,0 +1,249 @@
+{
+  "format": "tacticmesh-pack",
+  "formatVersion": "1.0.0",
+  "packId": "minimal-fictional",
+  "packRevision": "1",
+  "title": "Minimal fictional XI with explicit role defaults",
+  "author": "Wert Qas",
+  "engineCompatibility": "tf-v1",
+  "attributeModelVersion": "tm-attributes-1",
+  "defaultsProfileVersion": "tm-role-1",
+  "provenance": {
+    "category": "fictional",
+    "notes": "Original procedural fictional squads. No official club or player affiliation."
+  },
+  "dataLicense": "CC0-1.0",
+  "assetLicenses": [],
+  "teams": [
+    {
+      "id": "home",
+      "name": "Redbridge FC",
+      "abbreviation": "RBF",
+      "formation": "4-3-3",
+      "tacticalPreset": "patient",
+      "kits": {
+        "home": {
+          "primary": "#cf3d48",
+          "secondary": "#f5f0df"
+        },
+        "away": {
+          "primary": "#f5f0df",
+          "secondary": "#cf3d48"
+        }
+      },
+      "lineup": [
+        "home-p01",
+        "home-p02",
+        "home-p03",
+        "home-p04",
+        "home-p05",
+        "home-p06",
+        "home-p07",
+        "home-p08",
+        "home-p09",
+        "home-p10",
+        "home-p11"
+      ],
+      "players": [
+        {
+          "id": "home-p01",
+          "name": "Theo Silva",
+          "number": 1,
+          "positionFamily": "GK",
+          "roles": [
+            "GK"
+          ],
+          "preferredRole": "GK",
+          "preferredFoot": "right",
+          "height": 1.83,
+          "weight": 78,
+          "appearance": {
+            "skinColor": "#ad7655",
+            "hairColor": "#211b17",
+            "hairStyle": "short"
+          }
+        },
+        {
+          "id": "home-p02",
+          "name": "Theo Young",
+          "number": 2,
+          "positionFamily": "DEF",
+          "roles": [
+            "RB"
+          ],
+          "preferredRole": "RB",
+          "preferredFoot": "left",
+          "height": 1.81,
+          "weight": 79,
+          "appearance": {
+            "skinColor": "#754b35",
+            "hairColor": "#755038",
+            "hairStyle": "short"
+          }
+        },
+        {
+          "id": "home-p03",
+          "name": "Alex Carter",
+          "number": 3,
+          "positionFamily": "DEF",
+          "roles": [
+            "RCB"
+          ],
+          "preferredRole": "RCB",
+          "preferredFoot": "right",
+          "height": 1.89,
+          "weight": 74,
+          "appearance": {
+            "skinColor": "#d5a079",
+            "hairColor": "#46352c",
+            "hairStyle": "crop"
+          }
+        },
+        {
+          "id": "home-p04",
+          "name": "Luis Pereira",
+          "number": 4,
+          "positionFamily": "DEF",
+          "roles": [
+            "LCB"
+          ],
+          "preferredRole": "LCB",
+          "preferredFoot": "right",
+          "height": 1.82,
+          "weight": 71,
+          "appearance": {
+            "skinColor": "#e9d0b6",
+            "hairColor": "#211b17",
+            "hairStyle": "short"
+          }
+        },
+        {
+          "id": "home-p05",
+          "name": "Alex Joseph",
+          "number": 5,
+          "positionFamily": "DEF",
+          "roles": [
+            "LB"
+          ],
+          "preferredRole": "LB",
+          "preferredFoot": "right",
+          "height": 1.75,
+          "weight": 71,
+          "appearance": {
+            "skinColor": "#ad7655",
+            "hairColor": "#755038",
+            "hairStyle": "bald"
+          }
+        },
+        {
+          "id": "home-p06",
+          "name": "Luis Nolan",
+          "number": 6,
+          "positionFamily": "MID",
+          "roles": [
+            "DM"
+          ],
+          "preferredRole": "DM",
+          "preferredFoot": "right",
+          "height": 1.78,
+          "weight": 68,
+          "appearance": {
+            "skinColor": "#754b35",
+            "hairColor": "#46352c",
+            "hairStyle": "crop"
+          }
+        },
+        {
+          "id": "home-p07",
+          "name": "Cameron Mendes",
+          "number": 7,
+          "positionFamily": "MID",
+          "roles": [
+            "RCM"
+          ],
+          "preferredRole": "RCM",
+          "preferredFoot": "right",
+          "height": 1.83,
+          "weight": 65,
+          "appearance": {
+            "skinColor": "#d5a079",
+            "hairColor": "#211b17",
+            "hairStyle": "short"
+          }
+        },
+        {
+          "id": "home-p08",
+          "name": "Leo Clarke",
+          "number": 8,
+          "positionFamily": "MID",
+          "roles": [
+            "LCM"
+          ],
+          "preferredRole": "LCM",
+          "preferredFoot": "right",
+          "height": 1.82,
+          "weight": 72,
+          "appearance": {
+            "skinColor": "#e9d0b6",
+            "hairColor": "#755038",
+            "hairStyle": "short"
+          }
+        },
+        {
+          "id": "home-p09",
+          "name": "Alex Baptiste",
+          "number": 9,
+          "positionFamily": "FWD",
+          "roles": [
+            "RW"
+          ],
+          "preferredRole": "RW",
+          "preferredFoot": "right",
+          "height": 1.69,
+          "weight": 62,
+          "appearance": {
+            "skinColor": "#ad7655",
+            "hairColor": "#46352c",
+            "hairStyle": "crop"
+          }
+        },
+        {
+          "id": "home-p10",
+          "name": "Omar Mendes",
+          "number": 10,
+          "positionFamily": "FWD",
+          "roles": [
+            "ST"
+          ],
+          "preferredRole": "ST",
+          "preferredFoot": "right",
+          "height": 1.67,
+          "weight": 71,
+          "appearance": {
+            "skinColor": "#754b35",
+            "hairColor": "#211b17",
+            "hairStyle": "bald"
+          }
+        },
+        {
+          "id": "home-p11",
+          "name": "Jamal Pereira",
+          "number": 11,
+          "positionFamily": "FWD",
+          "roles": [
+            "LW"
+          ],
+          "preferredRole": "LW",
+          "preferredFoot": "left",
+          "height": 1.88,
+          "weight": 81,
+          "appearance": {
+            "skinColor": "#d5a079",
+            "hairColor": "#755038",
+            "hairStyle": "short"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,369 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TacticMesh completed local result v1",
+  "description": "Structural export contract. Shared validateResult additionally checks event order, score consistency and completed cup fixtures. Checkpoints and cancelled/error runs are not completed reports. Keeper model tm-keeper-shot-continuity-1 separates raw keeperShotContacts from resolved shotStops; conventional saves is null. Historical reports retain their original numeric save-contact field and rating model.",
+  "type": "object",
+  "required": [
+    "format",
+    "formatVersion",
+    "id",
+    "kind",
+    "status",
+    "complete",
+    "seed",
+    "engineBuild",
+    "engineVersion",
+    "coreBuild",
+    "rulesVersion",
+    "runtime",
+    "attributeModelVersion",
+    "defaultsProfileVersion",
+    "compiledInputHash",
+    "ratingModelVersion"
+  ],
+  "properties": {
+    "format": {
+      "const": "tacticmesh-result"
+    },
+    "formatVersion": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "kind": {
+      "enum": [
+        "match",
+        "cup"
+      ]
+    },
+    "status": {
+      "const": "completed"
+    },
+    "complete": {
+      "const": true
+    },
+    "seed": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4294967295
+    },
+    "engineBuild": {
+      "type": "string"
+    },
+    "keeperMetricsModelVersion": {
+      "const": "tm-keeper-shot-continuity-1"
+    },
+    "ratingModelVersion": {
+      "enum": [
+        "tm-event-rating-1",
+        "tm-event-rating-2"
+      ]
+    },
+    "score": {
+      "$ref": "#/$defs/score"
+    },
+    "regulationScore": {
+      "$ref": "#/$defs/score"
+    },
+    "extraTimeScore": {
+      "$ref": "#/$defs/score"
+    },
+    "penaltyScore": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/score"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "winnerId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "decisionMethod": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "shortenedForTesting": {
+      "type": "boolean"
+    },
+    "halfSeconds": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "teamSnapshots": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "sequence",
+          "type",
+          "category",
+          "matchId",
+          "tick",
+          "period",
+          "periodSeconds"
+        ],
+        "properties": {
+          "sequence": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "type": {
+            "type": "string"
+          },
+          "category": {
+            "enum": [
+              "football",
+              "shootout"
+            ]
+          },
+          "matchId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "tick": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "period": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "periodSeconds": {
+            "type": "number",
+            "minimum": 0
+          },
+          "time": {
+            "type": "number",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "teams": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "players": {
+      "type": "array"
+    },
+    "entrants": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 16
+    },
+    "fixtures": {
+      "type": "array"
+    },
+    "champion": {
+      "type": "object"
+    },
+    "engineVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "coreBuild": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rulesVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "runtime": {
+      "type": "string",
+      "minLength": 1
+    },
+    "attributeModelVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "defaultsProfileVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "compiledInputHash": {
+      "type": "string",
+      "minLength": 1
+    },
+    "matchId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "simulationSchemaVersion": {
+      "const": 1
+    },
+    "knockout": {
+      "type": "boolean"
+    },
+    "durationSeconds": {
+      "type": "number",
+      "minimum": 0
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "match"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "score",
+          "regulationScore",
+          "extraTimeScore",
+          "teamSnapshots",
+          "teams",
+          "players",
+          "events",
+          "shortenedForTesting",
+          "matchId",
+          "simulationSchemaVersion",
+          "knockout",
+          "halfSeconds",
+          "durationSeconds",
+          "winnerId",
+          "decisionMethod",
+          "penaltyScore"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "cup"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "entrants",
+          "fixtures",
+          "champion"
+        ]
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "keeperMetricsModelVersion"
+        ],
+        "properties": {
+          "keeperMetricsModelVersion": {
+            "const": "tm-keeper-shot-continuity-1"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "teams": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "stats"
+              ],
+              "properties": {
+                "stats": {
+                  "$ref": "#/$defs/keeperStats"
+                }
+              }
+            }
+          },
+          "players": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "stats"
+              ],
+              "properties": {
+                "stats": {
+                  "$ref": "#/$defs/keeperStats"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "ratingModelVersion"
+        ],
+        "properties": {
+          "ratingModelVersion": {
+            "const": "tm-event-rating-2"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "keeperMetricsModelVersion"
+        ]
+      }
+    }
+  ],
+  "$defs": {
+    "score": {
+      "type": "object",
+      "required": [
+        "home",
+        "away"
+      ],
+      "properties": {
+        "home": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "away": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "keeperStats": {
+      "type": "object",
+      "required": [
+        "saves",
+        "shotStops",
+        "keeperShotContacts"
+      ],
+      "properties": {
+        "saves": {
+          "type": "null"
+        },
+        "shotStops": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "keeperShotContacts": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TacticMesh local match job",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "format": {
+      "const": "tacticmesh-match-job"
+    },
+    "formatVersion": {
+      "const": "1.0.0"
+    },
+    "pack": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024
+    },
+    "home": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,79}$"
+    },
+    "away": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,79}$"
+    },
+    "seed": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4294967295
+    },
+    "matchId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,79}$"
+    },
+    "knockout": {
+      "type": "boolean"
+    },
+    "halfSeconds": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "description": "Explicit test-only shortened half; defaults to regulation 2700 seconds."
+    }
+  },
+  "required": [
+    "format",
+    "formatVersion",
+    "pack",
+    "home",
+    "away",
+    "seed"
+  ]
+}

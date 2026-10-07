@@ -1,0 +1,146 @@
+{
+  "provenance": {
+    "report": ".project/reports/shot-opportunity-core-69b38cc0d8769028-seed20261014-2100s-ui-default-event-reconciled.json",
+    "coreBuild": "core-69b38cc0d8769028",
+    "seed": 20261014,
+    "note": "Compact recorded tick/time/event patterns. Shot launch fields come from shots[]; caught comes from the trace keeperResult field. shotBy is the trace shot-window association. Tests map recorded player IDs to a fresh compiled roster and assign fixture sequence ordinals; repeated contacts and shootout cases are explicit test mutations, not additional observed football results."
+  },
+  "cases": {
+    "directParryGoal": [
+      {
+        "type": "shot",
+        "tick": 25851,
+        "time": 430.833,
+        "playerId": "home-p09",
+        "teamId": "home"
+      },
+      {
+        "type": "save",
+        "tick": 25858,
+        "time": 430.95,
+        "keeperId": "away-p01",
+        "caught": false,
+        "shotBy": "home-p09"
+      },
+      {
+        "type": "goal",
+        "tick": 25860,
+        "time": 430.983,
+        "teamId": "home",
+        "shotPlayerId": "home-p09"
+      }
+    ],
+    "secondDirectParryGoal": [
+      {
+        "type": "shot",
+        "tick": 105496,
+        "time": 1758.25,
+        "playerId": "home-p09",
+        "teamId": "home"
+      },
+      {
+        "type": "save",
+        "tick": 105503,
+        "time": 1758.367,
+        "keeperId": "away-p01",
+        "caught": false,
+        "shotBy": "home-p09"
+      },
+      {
+        "type": "goal",
+        "tick": 105505,
+        "time": 1758.4,
+        "teamId": "home",
+        "shotPlayerId": "home-p09"
+      }
+    ],
+    "parryControlThenNewShotGoal": [
+      {
+        "type": "shot",
+        "tick": 78746,
+        "time": 1312.417,
+        "playerId": "home-p09",
+        "teamId": "home"
+      },
+      {
+        "type": "save",
+        "tick": 78750,
+        "time": 1312.483,
+        "keeperId": "away-p01",
+        "caught": false,
+        "shotBy": "home-p09"
+      },
+      {
+        "type": "ball-control",
+        "tick": 78766,
+        "time": 1312.75,
+        "playerId": "home-p09",
+        "teamId": "home"
+      },
+      {
+        "type": "shot",
+        "tick": 78791,
+        "time": 1313.167,
+        "playerId": "home-p09",
+        "teamId": "home"
+      },
+      {
+        "type": "goal",
+        "tick": 78798,
+        "time": 1313.283,
+        "teamId": "home",
+        "scorerId": "home-p09",
+        "shotPlayerId": "home-p09"
+      }
+    ],
+    "defenderControlThenOwnGoal": [
+      {
+        "type": "shot",
+        "tick": 72670,
+        "time": 1211.15,
+        "playerId": "home-p09",
+        "teamId": "home"
+      },
+      {
+        "type": "save",
+        "tick": 72671,
+        "time": 1211.167,
+        "keeperId": "away-p01",
+        "caught": false,
+        "shotBy": "home-p09"
+      },
+      {
+        "type": "ball-control",
+        "tick": 72687,
+        "time": 1211.433,
+        "playerId": "away-p02",
+        "teamId": "away"
+      },
+      {
+        "type": "goal",
+        "tick": 72853,
+        "time": 1214.2,
+        "teamId": "home",
+        "shotPlayerId": "home-p09",
+        "scorerId": null
+      }
+    ],
+    "caught": [
+      {
+        "type": "shot",
+        "tick": 1751,
+        "time": 29.167,
+        "playerId": "home-p09",
+        "teamId": "home"
+      },
+      {
+        "type": "save",
+        "tick": 1754,
+        "time": 29.217,
+        "keeperId": "away-p01",
+        "caught": true,
+        "shotBy": "home-p09"
+      }
+    ]
+  }
+}

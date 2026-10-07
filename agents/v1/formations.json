@@ -1,0 +1,418 @@
+{
+  "version": "tf-v1",
+  "formations": {
+    "4-3-3": [
+      [
+        "GK",
+        "GK",
+        5,
+        34
+      ],
+      [
+        "RB",
+        "DEF",
+        24,
+        58
+      ],
+      [
+        "RCB",
+        "DEF",
+        20,
+        45
+      ],
+      [
+        "LCB",
+        "DEF",
+        20,
+        23
+      ],
+      [
+        "LB",
+        "DEF",
+        24,
+        10
+      ],
+      [
+        "DM",
+        "MID",
+        38,
+        34
+      ],
+      [
+        "RCM",
+        "MID",
+        48,
+        47
+      ],
+      [
+        "LCM",
+        "MID",
+        48,
+        21
+      ],
+      [
+        "RW",
+        "FWD",
+        70,
+        58
+      ],
+      [
+        "ST",
+        "FWD",
+        76,
+        34
+      ],
+      [
+        "LW",
+        "FWD",
+        70,
+        10
+      ]
+    ],
+    "4-2-3-1": [
+      [
+        "GK",
+        "GK",
+        5,
+        34
+      ],
+      [
+        "RB",
+        "DEF",
+        24,
+        58
+      ],
+      [
+        "RCB",
+        "DEF",
+        20,
+        45
+      ],
+      [
+        "LCB",
+        "DEF",
+        20,
+        23
+      ],
+      [
+        "LB",
+        "DEF",
+        24,
+        10
+      ],
+      [
+        "DM",
+        "MID",
+        36,
+        43
+      ],
+      [
+        "DM",
+        "MID",
+        38,
+        25
+      ],
+      [
+        "RW",
+        "MID",
+        56,
+        57
+      ],
+      [
+        "AM",
+        "MID",
+        59,
+        34
+      ],
+      [
+        "LW",
+        "MID",
+        56,
+        11
+      ],
+      [
+        "ST",
+        "FWD",
+        77,
+        34
+      ]
+    ],
+    "4-4-2": [
+      [
+        "GK",
+        "GK",
+        5,
+        34
+      ],
+      [
+        "RB",
+        "DEF",
+        24,
+        58
+      ],
+      [
+        "RCB",
+        "DEF",
+        20,
+        45
+      ],
+      [
+        "LCB",
+        "DEF",
+        20,
+        23
+      ],
+      [
+        "LB",
+        "DEF",
+        24,
+        10
+      ],
+      [
+        "RM",
+        "MID",
+        45,
+        58
+      ],
+      [
+        "RCM",
+        "MID",
+        42,
+        43
+      ],
+      [
+        "LCM",
+        "MID",
+        42,
+        25
+      ],
+      [
+        "LM",
+        "MID",
+        45,
+        10
+      ],
+      [
+        "ST",
+        "FWD",
+        74,
+        43
+      ],
+      [
+        "ST",
+        "FWD",
+        74,
+        25
+      ]
+    ],
+    "3-4-2-1": [
+      [
+        "GK",
+        "GK",
+        5,
+        34
+      ],
+      [
+        "RCB",
+        "DEF",
+        20,
+        48
+      ],
+      [
+        "CB",
+        "DEF",
+        18,
+        34
+      ],
+      [
+        "LCB",
+        "DEF",
+        20,
+        20
+      ],
+      [
+        "RWB",
+        "MID",
+        42,
+        59
+      ],
+      [
+        "RCM",
+        "MID",
+        39,
+        43
+      ],
+      [
+        "LCM",
+        "MID",
+        39,
+        25
+      ],
+      [
+        "LWB",
+        "MID",
+        42,
+        9
+      ],
+      [
+        "RAM",
+        "MID",
+        59,
+        44
+      ],
+      [
+        "LAM",
+        "MID",
+        59,
+        24
+      ],
+      [
+        "ST",
+        "FWD",
+        77,
+        34
+      ]
+    ],
+    "3-5-2": [
+      [
+        "GK",
+        "GK",
+        5,
+        34
+      ],
+      [
+        "RCB",
+        "DEF",
+        20,
+        48
+      ],
+      [
+        "CB",
+        "DEF",
+        18,
+        34
+      ],
+      [
+        "LCB",
+        "DEF",
+        20,
+        20
+      ],
+      [
+        "RWB",
+        "MID",
+        42,
+        60
+      ],
+      [
+        "RCM",
+        "MID",
+        40,
+        46
+      ],
+      [
+        "CM",
+        "MID",
+        38,
+        34
+      ],
+      [
+        "LCM",
+        "MID",
+        40,
+        22
+      ],
+      [
+        "LWB",
+        "MID",
+        42,
+        8
+      ],
+      [
+        "ST",
+        "FWD",
+        74,
+        43
+      ],
+      [
+        "ST",
+        "FWD",
+        74,
+        25
+      ]
+    ]
+  },
+  "roleCodes": [
+    "GK",
+    "RB",
+    "LB",
+    "RCB",
+    "LCB",
+    "CB",
+    "DM",
+    "RDM",
+    "LDM",
+    "RCM",
+    "LCM",
+    "CM",
+    "AM",
+    "RAM",
+    "LAM",
+    "RM",
+    "LM",
+    "RWB",
+    "LWB",
+    "RW",
+    "LW",
+    "ST",
+    "DEF",
+    "MID",
+    "FWD"
+  ],
+  "presets": {
+    "balanced": {},
+    "patient": {
+      "tempo": 0.46,
+      "buildupRisk": 0.42,
+      "passingDirectness": 0.34,
+      "counterattack": 0.42,
+      "counterpress": 0.48,
+      "pressingIntensity": 0.48,
+      "defensiveLine": 0.56,
+      "compactness": 0.62,
+      "goalkeeperDistribution": "short"
+    },
+    "direct": {
+      "tempo": 0.6,
+      "buildupRisk": 0.56,
+      "passingDirectness": 0.63,
+      "counterattack": 0.66,
+      "counterpress": 0.55,
+      "pressingIntensity": 0.57,
+      "defensiveLine": 0.61,
+      "compactness": 0.58,
+      "goalkeeperDistribution": "mixed"
+    }
+  },
+  "tacticalFields": {
+    "width": 0.62,
+    "attackingWidth": 0.72,
+    "defensiveWidth": 0.56,
+    "defensiveLine": 0.58,
+    "pressingIntensity": 0.52,
+    "engagementLine": 0.55,
+    "compactness": 0.62,
+    "tempo": 0.52,
+    "buildupRisk": 0.45,
+    "passingDirectness": 0.42,
+    "counterattack": 0.5,
+    "counterpress": 0.5,
+    "crossingFrequency": 0.4,
+    "overlapPreference": 0.48,
+    "centralOverload": 0.5,
+    "goalkeeperDistribution": "mixed",
+    "markingBias": "zonal",
+    "timeManagement": 0.35
+  },
+  "lineup": "11 source player IDs in formation slot order, with exactly one GK first; remaining slots cannot select a GK."
+}
