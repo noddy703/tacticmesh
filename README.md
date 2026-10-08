@@ -8,6 +8,8 @@ Created by [Wert Qas](https://www.youtube.com/@wertqas9269), for the channel’s
 
 ## Play
 
+[Play in your browser](https://noddy703.itch.io/tacticmesh) · [RC1 downloads](https://github.com/noddy703/tacticmesh/releases/tag/v0.1.0-rc1) · [RC1 release guide](docs/releases/RC1.md) · [Watch the build](https://youtu.be/vDwGZy7pa1M)
+
 Open `tacticmesh.html` in a modern desktop browser. Start with the fictional Redbridge FC and Ashford Athletic teams, import a JSON/ZIP pack, or run a 4-, 8- or 16-team knockout cup. Set lineups, formations and tactics; watch or fast-simulate the same fixed-step engine. Results include statistics, player performance ratings and local JSON/CSV/PNG exports.
 
 Matches and imports run on your device. No TacticMesh account, paid AI call, subscription or backend is required. Export a full backup before clearing browser storage, moving devices or closing an in-memory session. A closed tab stops the simulation. Incompatible engine checkpoints remain preserved but cannot continue.
@@ -16,11 +18,11 @@ Matches and imports run on your device. No TacticMesh account, paid AI call, sub
 
 Teams → Import teams → Create with AI offers a downloadable contract kit and a copyable prompt. Attach the kit to your own assistant, request a compatible JSON/ZIP, then **Check pack → review the preview → Import teams**. The assistant is external; TacticMesh does not call an AI service.
 
-[Pack guide](docs/PACKS.md). Share only data/images you may redistribute. Publish a pack on your own itch.io page and post its link in the project discussion board once available. Importing is local and does not publish a pack.
+[Pack guide](docs/PACKS.md). Share only data/images you may redistribute. Publish a pack on your own itch.io page and post its link in the [project discussion board](https://noddy703.itch.io/tacticmesh/community). Importing is local and does not publish a pack.
 
 ## Current RC limits
 
-The selected engine is `engine-4994949ed88c0595`, core `core-d9aca92dd03969f8`. Public application `tf-136f19c256623e45` adds pack-creation help, ball/player presentation and Theatre/Fullscreen/player cards around that unchanged engine. The final local release gate passes 61 programs (52 core plus nine Product/build); hosted itch checks remain pending. Its six-match screen remains on scoring/chance-volume HOLD: 30 goals, 222 shots and 562 minutes. Results are model outcomes, not reliable predictions of real fixtures. See [known limitations](docs/KNOWN_LIMITATIONS.md).
+The selected engine is `engine-4994949ed88c0595`, core `core-d9aca92dd03969f8`. Public application `tf-136f19c256623e45` adds pack-creation help, ball/player presentation and Theatre/Fullscreen/player cards around that unchanged engine. The final local release gate passes 61 programs (52 core plus nine Product/build); scoped hosted checks passed in Chrome on macOS, while offline execution, audible sound and stated edge cases remain unverified. See the [RC1 release guide](docs/releases/RC1.md) for exact test coverage. Its six-match screen remains on scoring/chance-volume HOLD: 30 goals, 222 shots and 562 minutes. Results are model outcomes, not reliable predictions of real fixtures. See [known limitations](docs/KNOWN_LIMITATIONS.md).
 
 ## Build and contribute
 
