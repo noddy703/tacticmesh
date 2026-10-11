@@ -1,5 +1,5 @@
 # TacticMesh
-An open-source football simulator. Created by Wert Qas.
+An open-source football simulator. Created by Energen Games.
 Pack creation and local execution are supported. Hosted remote execution is not.
 
 - Agent manifest: /agents/manifest.json

@@ -2,13 +2,13 @@
 
 **An open-source football simulator. Bring your teams. Watch the match.**
 
-Created by [Wert Qas](https://www.youtube.com/@wertqas9269), for the channel’s 10-subscriber special. Original software is [MIT licensed](LICENSE); pack data and images retain their separate permissions. Developed with AI-assisted coding.
+Created by [Energen Games](https://www.youtube.com/@energengames) (previously Wert Qas), for the channel’s 10-subscriber special. Original software is [MIT licensed](LICENSE); pack data and images retain their separate permissions. Developed with AI-assisted coding.
 
 ![Actual TacticMesh RC1 football match running in the selected engine, with scoreboard and match controls](docs/images/04-active-pitch.png)
 
 ## Play
 
-[Play in your browser](https://noddy703.itch.io/tacticmesh) · [RC1 downloads](https://github.com/noddy703/tacticmesh/releases/tag/v0.1.0-rc1) · [RC1 release guide](docs/releases/RC1.md) · [Watch the build](https://youtu.be/vDwGZy7pa1M)
+[Play in your browser](https://noddy703.itch.io/tacticmesh) · [Latest downloads](https://github.com/noddy703/tacticmesh/releases) · [Original RC1](https://github.com/noddy703/tacticmesh/releases/tag/v0.1.0-rc1) · [RC1 release guide](docs/releases/RC1.md) · [Watch the build](https://youtu.be/vDwGZy7pa1M)
 
 Open `tacticmesh.html` in a modern desktop browser. Start with the fictional Redbridge FC and Ashford Athletic teams, import a JSON/ZIP pack, or run a 4-, 8- or 16-team knockout cup. Set lineups, formations and tactics; watch or fast-simulate the same fixed-step engine. Results include statistics, player performance ratings and local JSON/CSV/PNG exports.
 
@@ -20,9 +20,13 @@ Teams → Import teams → Create with AI offers a downloadable contract kit and
 
 [Pack guide](docs/PACKS.md). Share only data/images you may redistribute. Publish a pack on your own itch.io page and post its link in the [project discussion board](https://noddy703.itch.io/tacticmesh/community). Importing is local and does not publish a pack.
 
+## Creator identity
+
+TacticMesh is now credited to Energen Games. Its name, repository and itch.io addresses stay the same. This is a creator-branding update; the football engine, save format and browser storage keys remain unchanged. Original copyright and MIT notices remain credited to Wert Qas. See [branding release notes](docs/releases/RC1-branding.md).
+
 ## Current RC limits
 
-The selected engine is `engine-4994949ed88c0595`, core `core-d9aca92dd03969f8`. Public application `tf-136f19c256623e45` adds pack-creation help, ball/player presentation and Theatre/Fullscreen/player cards around that unchanged engine. The final local release gate passes 61 programs (52 core plus nine Product/build); scoped hosted checks passed in Chrome on macOS, while offline execution, audible sound and stated edge cases remain unverified. See the [RC1 release guide](docs/releases/RC1.md) for exact test coverage. Its six-match screen remains on scoring/chance-volume HOLD: 30 goals, 222 shots and 562 minutes. Results are model outcomes, not reliable predictions of real fixtures. See [known limitations](docs/KNOWN_LIMITATIONS.md).
+The selected engine is `engine-4994949ed88c0595`, core `core-d9aca92dd03969f8`. Original RC1 application `tf-136f19c256623e45` adds pack-creation help, ball/player presentation and Theatre/Fullscreen/player cards around that unchanged engine. The final local release gate passes 61 programs (52 core plus nine Product/build); scoped hosted checks passed in Chrome on macOS, while offline execution, audible sound and stated edge cases remain unverified. See the [RC1 release guide](docs/releases/RC1.md) for exact test coverage. Its six-match screen remains on scoring/chance-volume HOLD: 30 goals, 222 shots and 562 minutes. Results are model outcomes, not reliable predictions of real fixtures. See [known limitations](docs/KNOWN_LIMITATIONS.md).
 
 ## Build and contribute
 
